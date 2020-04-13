@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gQx-kl-0ed">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Virtual Coffee Machine-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Virtual_Coffee_Machine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xn-6D-JE5">
+                                <rect key="frame" x="80" y="104" width="160" height="40.5"/>
+                                <color key="backgroundColor" red="0.51521665918706872" green="0.90809506843537846" blue="0.6481933522769624" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1Xn-6D-JE5" secondAttribute="height" multiplier="130:33" id="3PW-iC-f3V"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="dks-8Z-TRS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title=" CAPPUCCINO ">
+                                    <color key="titleColor" red="0.0" green="0.37647058823529411" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.12648394330000001" green="0.32904966600000002" blue="0.21153024940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="cappucino:" destination="BYZ-38-t0r" eventType="touchDown" id="hDm-KN-5nM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eB-EK-Geg">
+                                <rect key="frame" x="80" y="154.5" width="160" height="40.5"/>
+                                <color key="backgroundColor" red="0.51521665920000004" green="0.90809506839999998" blue="0.64819335229999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="aXu-cT-rTv"/>
+                                    <constraint firstAttribute="width" secondItem="1eB-EK-Geg" secondAttribute="height" multiplier="130:33" id="olf-qG-HRm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="  AMERICANO  ">
+                                    <color key="titleColor" red="0.0" green="0.37647058823529411" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.12648394330000001" green="0.32904966600000002" blue="0.21153024940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="americano:" destination="BYZ-38-t0r" eventType="touchDown" id="YKj-uc-h5w"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAKE YOUR COFFEE CHOICE:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRJ-3R-WLK">
+                                <rect key="frame" x="40" y="64" width="240" height="25"/>
+                                <color key="backgroundColor" red="0.74881699433783755" green="0.8979634463829016" blue="0.7786144978988595" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="4TX-36-SZJ"/>
+                                    <constraint firstAttribute="width" secondItem="kRJ-3R-WLK" secondAttribute="height" multiplier="48:5" id="K07-0G-Pvv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="0.12648394325091394" green="0.32904966600200669" blue="0.21153024937654943" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.12648394330000001" green="0.32904966600000002" blue="0.21153024940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="shadowColor" red="0.12648394330000001" green="0.32904966600000002" blue="0.21153024940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="260" verticalHuggingPriority="260" image="machine" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evE-gO-d79">
+                                <rect key="frame" x="55" y="220" width="210" height="221"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="evE-gO-d79" secondAttribute="height" multiplier="211:222" id="5Dt-9H-nvT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="Xlx-1e-371"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="190" id="ljH-Yq-La4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="ANSWER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiw-MB-YHC">
+                                <rect key="frame" x="20" y="461" width="280" height="41.5"/>
+                                <color key="backgroundColor" red="0.91202366349999997" green="0.93225955959999995" blue="0.94420051569999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eiw-MB-YHC" secondAttribute="height" multiplier="278:41" id="nEY-TA-URy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="ofm-G4-GPh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87058823529411766" green="0.96862745098039216" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="1eB-EK-Geg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="4U4-ed-xJj"/>
+                            <constraint firstItem="kRJ-3R-WLK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8Z2-tb-NQc"/>
+                            <constraint firstItem="eiw-MB-YHC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8wK-6e-yUw"/>
+                            <constraint firstItem="evE-gO-d79" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="N95-na-k6R"/>
+                            <constraint firstItem="1Xn-6D-JE5" firstAttribute="top" secondItem="kRJ-3R-WLK" secondAttribute="bottom" constant="15" id="S6x-Mn-5OU"/>
+                            <constraint firstItem="kRJ-3R-WLK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="SpI-tE-nWs"/>
+                            <constraint firstItem="1Xn-6D-JE5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="g2b-Cl-YnE"/>
+                            <constraint firstItem="evE-gO-d79" firstAttribute="top" secondItem="1eB-EK-Geg" secondAttribute="bottom" constant="25" id="ngL-1F-ggJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1eB-EK-Geg" secondAttribute="trailing" constant="80" id="nls-Re-lih"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kRJ-3R-WLK" secondAttribute="trailing" constant="40" id="p48-uk-Ikd"/>
+                            <constraint firstItem="eiw-MB-YHC" firstAttribute="top" secondItem="evE-gO-d79" secondAttribute="bottom" constant="20" id="qLz-qQ-i6q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eiw-MB-YHC" secondAttribute="trailing" constant="20" id="rcO-ft-YGb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="evE-gO-d79" secondAttribute="trailing" constant="55" id="s4f-e3-Vhh"/>
+                            <constraint firstItem="1eB-EK-Geg" firstAttribute="top" secondItem="1Xn-6D-JE5" secondAttribute="bottom" constant="10" id="xhb-Ne-H0a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Xn-6D-JE5" secondAttribute="trailing" constant="80" id="xik-9o-riO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Virtual Coffee Machine" id="To0-qL-BtN">
+                        <barButtonItem key="rightBarButtonItem" title="Actions" image="gear" catalog="system" id="4Ip-bj-Upz">
+                            <connections>
+                                <segue destination="vPV-rN-Tyz" kind="show" identifier="SegueToSettings" id="ezD-0D-kGA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="answer" destination="eiw-MB-YHC" id="hug-Bw-oiC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35.625" y="117.25352112676056"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gA2-8h-c7K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gQx-kl-0ed" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cXA-28-rD5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="c5P-ga-i2G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6XW-FQ-SFk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-651" y="119"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="2Tq-aD-fPx">
+            <objects>
+                <viewController id="vPV-rN-Tyz" customClass="SettingsViewController" customModule="Virtual_Coffee_Machine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="et6-Ne-Rdb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT ACTIONS TO FIX COFFEE MACHINE:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNh-6E-yb6">
+                                <rect key="frame" x="15" y="89" width="290" height="17"/>
+                                <color key="backgroundColor" red="0.64462060390930753" green="0.81744421777752696" blue="0.89409501903553301" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.4432435334" green="0.58550983670000001" blue="0.75085312130000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="RUn-6w-T2r"/>
+                                    <constraint firstAttribute="width" secondItem="jNh-6E-yb6" secondAttribute="height" multiplier="290:17" id="xQQ-SN-rRg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.070427302790182347" green="0.32687161120944114" blue="0.86088197969543145" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.070427302789999993" green="0.32687161120000002" blue="0.86088197970000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="shadowColor" red="0.18217313844821534" green="0.25663488808042534" blue="0.3157320748730964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q37-Gy-7HM">
+                                <rect key="frame" x="45" y="196" width="230" height="33"/>
+                                <color key="backgroundColor" red="0.38039215686274508" green="0.76470588235294112" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="bW1-HC-Odb"/>
+                                    <constraint firstAttribute="width" secondItem="q37-Gy-7HM" secondAttribute="height" multiplier="230:33" id="x9v-Re-KV8"/>
+                                </constraints>
+                                <color key="tintColor" red="0.3787754445" green="0.76544362330000004" blue="0.95294360730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="ADD COFFEE BEANS  ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.18217313839999999" green="0.25663488810000001" blue="0.31573207489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="addCoffeeBeans:" destination="vPV-rN-Tyz" eventType="touchDown" id="66r-Ak-CFg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Diw-h9-7Kj" userLabel="ADD MILK">
+                                <rect key="frame" x="45" y="250" width="230" height="29"/>
+                                <color key="backgroundColor" red="0.3787754445" green="0.76544362330000004" blue="0.95294360730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Diw-h9-7Kj" secondAttribute="height" multiplier="230:29" id="fzf-iW-18G"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="wnH-Y6-p7W"/>
+                                </constraints>
+                                <color key="tintColor" red="0.3787754445" green="0.76544362330000004" blue="0.95294360730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="  ADD MILK           ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.18217313839999999" green="0.25663488810000001" blue="0.31573207489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="addMilk:" destination="vPV-rN-Tyz" eventType="touchDown" id="aPh-zQ-C7k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtR-jk-zwc">
+                                <rect key="frame" x="45" y="300" width="230" height="32"/>
+                                <color key="backgroundColor" red="0.3787754445" green="0.76544362330000004" blue="0.95294360730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RtR-jk-zwc" secondAttribute="height" multiplier="115:16" id="TXa-Lb-dN9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="cMd-Nc-Fpf"/>
+                                </constraints>
+                                <color key="tintColor" red="0.3787754445" green="0.76544362330000004" blue="0.95294360730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CLEAN DRIP TRAY    ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.18217313839999999" green="0.25663488810000001" blue="0.31573207489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="cleanDripTray:" destination="vPV-rN-Tyz" eventType="touchDown" id="tfk-Sb-ZSA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ryp-i9-5kW">
+                                <rect key="frame" x="45" y="144" width="230" height="33"/>
+                                <color key="backgroundColor" red="0.38039215686274508" green="0.76470588235294112" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ryp-i9-5kW" secondAttribute="height" multiplier="230:33" id="DmR-pN-5zn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="nFU-8A-tBx"/>
+                                </constraints>
+                                <color key="tintColor" red="0.18217313839999999" green="0.25663488810000001" blue="0.31573207489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="  ADD WATER         ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.18217313839999999" green="0.25663488810000001" blue="0.31573207489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="addWater:" destination="vPV-rN-Tyz" eventType="touchDown" id="skL-g9-kSg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.88627450980392153" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ryw-W6-3dK" firstAttribute="trailing" secondItem="jNh-6E-yb6" secondAttribute="trailing" constant="15" id="76V-AE-bOv"/>
+                            <constraint firstItem="RtR-jk-zwc" firstAttribute="leading" secondItem="ryw-W6-3dK" secondAttribute="leading" constant="45" id="Jlf-Cr-Q29"/>
+                            <constraint firstItem="q37-Gy-7HM" firstAttribute="leading" secondItem="ryw-W6-3dK" secondAttribute="leading" constant="45" id="NU1-5r-i7o"/>
+                            <constraint firstItem="ryw-W6-3dK" firstAttribute="trailing" secondItem="Diw-h9-7Kj" secondAttribute="trailing" constant="45" id="RPi-O7-wlK"/>
+                            <constraint firstItem="Diw-h9-7Kj" firstAttribute="top" secondItem="q37-Gy-7HM" secondAttribute="bottom" constant="21" id="TJQ-OB-ZW7"/>
+                            <constraint firstItem="Ryp-i9-5kW" firstAttribute="top" secondItem="jNh-6E-yb6" secondAttribute="bottom" constant="38" id="Zmp-gf-0Uo"/>
+                            <constraint firstItem="Ryp-i9-5kW" firstAttribute="leading" secondItem="ryw-W6-3dK" secondAttribute="leading" constant="45" id="avE-aD-qd2"/>
+                            <constraint firstItem="ryw-W6-3dK" firstAttribute="trailing" secondItem="Ryp-i9-5kW" secondAttribute="trailing" constant="45" id="b0A-Ro-QfJ"/>
+                            <constraint firstItem="Diw-h9-7Kj" firstAttribute="leading" secondItem="ryw-W6-3dK" secondAttribute="leading" constant="45" id="bUX-XE-jVY"/>
+                            <constraint firstItem="q37-Gy-7HM" firstAttribute="top" secondItem="Ryp-i9-5kW" secondAttribute="bottom" constant="19" id="mee-C1-hw7"/>
+                            <constraint firstItem="jNh-6E-yb6" firstAttribute="leading" secondItem="ryw-W6-3dK" secondAttribute="leading" constant="15" id="oUD-aX-HIS"/>
+                            <constraint firstItem="ryw-W6-3dK" firstAttribute="trailing" secondItem="q37-Gy-7HM" secondAttribute="trailing" constant="45" id="qk5-LK-ckt"/>
+                            <constraint firstItem="RtR-jk-zwc" firstAttribute="top" secondItem="Diw-h9-7Kj" secondAttribute="bottom" constant="21" id="s2K-xu-DYc"/>
+                            <constraint firstItem="jNh-6E-yb6" firstAttribute="top" secondItem="ryw-W6-3dK" secondAttribute="top" constant="45" id="wDQ-L0-a05"/>
+                            <constraint firstItem="ryw-W6-3dK" firstAttribute="trailing" secondItem="RtR-jk-zwc" secondAttribute="trailing" constant="45" id="wxl-x9-hSD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ryw-W6-3dK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="YiM-XR-9y5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0G-VG-DKJ" userLabel="First Responder" customClass="UIResponder" propertyAccessControl="none" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787.5" y="117.25352112676056"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="machine" width="225" height="225"/>
+    </resources>
+</document>
