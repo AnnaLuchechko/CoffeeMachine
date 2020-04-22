@@ -12,10 +12,6 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     var coffeeMachine: CoffeeMachine!
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     override func willMove(toParent parent: UIViewController?) {
         let navigationController = parent as? UINavigationController
