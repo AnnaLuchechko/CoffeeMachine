@@ -27,19 +27,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func makeCoffee(_ sender: UIButton) {
-        var coffee: CoffeeMachine.CoffeeIngredients
+        var coffee: CoffeeMachine.Drinks
         switch sender.tag {
         case 0:
-            coffee = coffeeMachine.cappuccino
+            coffee = .Cappucino
             break
         case 1:
-            coffee = coffeeMachine.americano
+            coffee = .Americano
             break
         default:
-            coffee = coffeeMachine.americano
+            coffee = .Americano
             break
         }
-        coffeeMachine.makeCoffee(coffee: coffee)
+        coffeeMachine.makeCoffee(drink: coffee)
         statusLabel.text = coffeeMachine.status
     }
 

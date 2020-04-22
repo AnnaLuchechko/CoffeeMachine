@@ -16,15 +16,28 @@ class CoffeeMachine {
         var dripTray: Int
     }
     
+    enum Drinks {
+        case Cappucino, Americano
+    }
+    
+    private func getCoffeeIngridients(drink: Drinks) -> CoffeeIngredients {
+        switch drink {
+        case .Americano:
+            return americano
+        case .Cappucino:
+            return cappuccino
+        }
+    }
+    
     private var coffeeMachine: CoffeeIngredients = CoffeeIngredients (name: "", water: 0, coffeeBeans: 0, milk: 0, dripTray: 5)
     private var coffeeMachineTanks: CoffeeIngredients = CoffeeIngredients (name: "", water: 2000, coffeeBeans: 500, milk: 1000, dripTray: 5)
-    var americano: CoffeeIngredients = CoffeeIngredients (name: "americano", water: 500, coffeeBeans: 125, milk: 0, dripTray: 1)
-    var cappuccino: CoffeeIngredients = CoffeeIngredients (name: "cappuccino", water: 1000, coffeeBeans: 125, milk: 500, dripTray: 1)
+    private var americano: CoffeeIngredients = CoffeeIngredients (name: "americano", water: 500, coffeeBeans: 125, milk: 0, dripTray: 1)
+    private var cappuccino: CoffeeIngredients = CoffeeIngredients (name: "cappuccino", water: 1000, coffeeBeans: 125, milk: 500, dripTray: 1)
     
     private var _status: String = ""
     
     var status: String {
-      get { return _status }
+        get { return _status }
     }
     
     func addWater() {
@@ -74,10 +87,10 @@ class CoffeeMachine {
         return true
     }
 
-    func makeCoffee(coffee: CoffeeIngredients) {
-        if checkIngredients(coffee: coffee) {
-            takeIngredients(coffee: coffee)
-            _status = "Your \(coffee.name) is ready now"
+    func makeCoffee(drink: Drinks) {
+        if checkIngredients(coffee: getCoffeeIngridients(drink: drink)) {
+            takeIngredients(coffee: getCoffeeIngridients(drink: drink))
+            _status = "Your \(getCoffeeIngridients(drink: drink).name) is ready now"
         }
     }
 }
