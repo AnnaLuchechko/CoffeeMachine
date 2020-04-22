@@ -20,26 +20,26 @@ class CoffeeMachine {
     var coffeeMachineTanks: CoffeeIngredients = CoffeeIngredients (name: "", water: 2000, coffeeBeans: 500, milk: 1000, dripTray: 5)
     var americano: CoffeeIngredients = CoffeeIngredients (name: "americano", water: 500, coffeeBeans: 125, milk: 0, dripTray: 1)
     var cappuccino: CoffeeIngredients = CoffeeIngredients (name: "cappuccino", water: 1000, coffeeBeans: 125, milk: 500, dripTray: 1)
-    var answer: String = ""
+    var status: String = ""
     
     func addWater() {
         coffeeMachine.water = coffeeMachineTanks.water
-        answer = "Water in tank now = \(coffeeMachine.water)"
+        status = "Water in tank now = \(coffeeMachine.water)"
     }
     
     func addCoffeeBeans() {
         coffeeMachine.coffeeBeans = coffeeMachineTanks.coffeeBeans
-        answer = "Coffee beans in tank now = \(coffeeMachine.coffeeBeans)"
+        status = "Coffee beans in tank now = \(coffeeMachine.coffeeBeans)"
     }
 
     func addMilk() {
         coffeeMachine.milk = coffeeMachineTanks.milk
-        answer = "Milk in tank now = \(coffeeMachine.milk)"
+        status = "Milk in tank now = \(coffeeMachine.milk)"
     }
 
     func cleanDripTray() {
         coffeeMachine.dripTray = coffeeMachineTanks.dripTray
-        answer = "Drip tray is clean now"
+        status = "Drip tray is clean now"
     }
 
     func takeIngredients(coffee: CoffeeIngredients) {
@@ -51,19 +51,19 @@ class CoffeeMachine {
     
     func checkIngredients(coffee: CoffeeIngredients) -> Bool {
         if coffeeMachine.water < coffee.water {
-            answer = "Please, add water"
+            status = "Please, add water"
             return false
         }
         if coffeeMachine.coffeeBeans < coffee.coffeeBeans {
-            answer = "Please, add coffee beans"
+            status = "Please, add coffee beans"
             return false
         }
         if coffeeMachine.milk < coffee.milk {
-            answer = "Please, add milk"
+            status = "Please, add milk"
             return false
         }
         if coffeeMachine.dripTray < coffee.dripTray {
-            answer = "Please, clean drip tray"
+            status = "Please, clean drip tray"
             return false
         }
         return true
@@ -72,7 +72,7 @@ class CoffeeMachine {
     func makeCoffee(coffee: CoffeeIngredients) {
         if checkIngredients(coffee: coffee) {
             takeIngredients(coffee: coffee)
-            answer = "Your \(coffee.name) is ready now"
+            status = "Your \(coffee.name) is ready now"
         }
     }
 }

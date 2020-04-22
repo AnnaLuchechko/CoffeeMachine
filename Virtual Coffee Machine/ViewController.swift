@@ -13,11 +13,11 @@ class ViewController: UIViewController {
     
     var coffeeMachine = CoffeeMachine()
     
-    @IBOutlet weak var answer: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        answer.text = coffeeMachine.answer
+        statusLabel.text = coffeeMachine.status
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -28,12 +28,12 @@ class ViewController: UIViewController {
 
     @IBAction func cappucino(_ sender: UIButton) {
         coffeeMachine.makeCoffee(coffee: coffeeMachine.cappuccino)
-        answer.text = coffeeMachine.answer
+        statusLabel.text = coffeeMachine.status
     }
     
     @IBAction func americano(_ sender: UIButton) {
         coffeeMachine.makeCoffee(coffee: coffeeMachine.americano)
-        answer.text = coffeeMachine.answer
+        statusLabel.text = coffeeMachine.status
     }
 
 }
