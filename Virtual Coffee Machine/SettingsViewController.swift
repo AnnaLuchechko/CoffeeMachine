@@ -13,13 +13,6 @@ class SettingsViewController: UIViewController {
     
     var coffeeMachine: CoffeeMachine!
     
-    override func willMove(toParent parent: UIViewController?) {
-        let navigationController = parent as? UINavigationController
-        if let viewController = navigationController?.viewControllers[0] as? ViewController {
-            viewController.coffeeMachine = coffeeMachine
-        }
-    }
-    
     @IBAction func cofeeService(_ sender: UIButton) {
         switch sender.tag {
         case 0:
