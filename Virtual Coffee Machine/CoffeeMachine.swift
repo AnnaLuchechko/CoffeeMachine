@@ -47,14 +47,14 @@ class CoffeeMachine {
         _status = "Drip tray is clean now"
     }
 
-    func takeIngredients(coffee: CoffeeIngredients) {
+    private func takeIngredients(coffee: CoffeeIngredients) {
         coffeeMachine.water -= coffee.water
         coffeeMachine.coffeeBeans -= coffee.coffeeBeans
         coffeeMachine.milk -= coffee.milk
         coffeeMachine.dripTray -= coffee.dripTray
     }
     
-    func checkIngredients(coffee: CoffeeIngredients) -> Bool {
+    private func checkIngredients(coffee: CoffeeIngredients) -> Bool {
         if coffeeMachine.water < coffee.water {
             _status = "Please, add water"
             return false
