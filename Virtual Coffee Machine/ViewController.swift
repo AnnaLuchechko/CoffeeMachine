@@ -11,9 +11,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var coffeeMachine = CoffeeMachine()
-    
     @IBOutlet weak var statusLabel: UILabel!
+    
+    var coffeeMachine = CoffeeMachine()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -25,14 +25,21 @@ class ViewController: UIViewController {
             settingsViewController.coffeeMachine = coffeeMachine
         }
     }
-
-    @IBAction func cappucino(_ sender: UIButton) {
-        coffeeMachine.makeCoffee(coffee: coffeeMachine.cappuccino)
-        statusLabel.text = coffeeMachine.status
-    }
     
-    @IBAction func americano(_ sender: UIButton) {
-        coffeeMachine.makeCoffee(coffee: coffeeMachine.americano)
+    @IBAction func makeCoffee(_ sender: UIButton) {
+        var coffee: CoffeeMachine.CoffeeIngredients
+        switch sender.tag {
+        case 0:
+            coffee = coffeeMachine.cappuccino
+            break
+        case 1:
+            coffee = coffeeMachine.americano
+            break
+        default:
+            coffee = coffeeMachine.americano
+            break
+        }
+        coffeeMachine.makeCoffee(coffee: coffee)
         statusLabel.text = coffeeMachine.status
     }
 

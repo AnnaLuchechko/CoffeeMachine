@@ -23,22 +23,25 @@ class SettingsViewController: UIViewController {
             viewController.coffeeMachine = coffeeMachine
         }
     }
+    
+    @IBAction func cofeeService(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            coffeeMachine.addWater()
+            break
+        case 1:
+            coffeeMachine.addCoffeeBeans()
+            break
+        case 2:
+            coffeeMachine.addMilk()
+            break
+        case 3:
+            coffeeMachine.cleanDripTray()
+            break
+        default:
+            break
+        }
+    }
 
-    @IBAction func addWater(_ sender: Any) {
-        coffeeMachine.addWater()
-    }
-
-    @IBAction func addCoffeeBeans(_ sender: Any) {
-        coffeeMachine.addCoffeeBeans()
-    }
-    
-    @IBAction func addMilk(_ sender: Any) {
-        coffeeMachine.addMilk()
-    }
-    
-    @IBAction func cleanDripTray(_ sender: Any) {
-        coffeeMachine.cleanDripTray()
-    }
-    
 }
 
