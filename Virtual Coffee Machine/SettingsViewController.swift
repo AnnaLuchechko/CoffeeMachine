@@ -11,7 +11,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    var coffeeCup: CoffeeMachine!
+    var coffeeMachine: CoffeeMachine!
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,24 +20,24 @@ class SettingsViewController: UIViewController {
     override func willMove(toParent parent: UIViewController?) {
         let navigationController = parent as? UINavigationController
         if let viewController = navigationController?.viewControllers[0] as? ViewController {
-            viewController.coffeeCup = coffeeCup
+            viewController.coffeeMachine = coffeeMachine
         }
     }
 
     @IBAction func addWater(_ sender: Any) {
-        coffeeCup.addWater()
+        coffeeMachine.addWater()
     }
 
     @IBAction func addCoffeeBeans(_ sender: Any) {
-        coffeeCup.addCoffeeBeans()
+        coffeeMachine.addCoffeeBeans()
     }
     
     @IBAction func addMilk(_ sender: Any) {
-        coffeeCup.addMilk()
+        coffeeMachine.addMilk()
     }
     
     @IBAction func cleanDripTray(_ sender: Any) {
-        coffeeCup.cleanDripTray()
+        coffeeMachine.cleanDripTray()
     }
     
 }
