@@ -11,14 +11,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var coffeeMachine: CoffeeMachine!
+    var coffeeMachine = CoffeeMachine()
     
     @IBOutlet weak var answer: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        coffeeMachine = CoffeeMachine()
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
