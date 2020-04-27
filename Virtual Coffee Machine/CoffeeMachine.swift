@@ -16,15 +16,15 @@ class CoffeeMachine {
         var dripTray: Int
     }
     
-    enum Drinks {
-        case Cappucino, Americano
+    enum Drink {
+        case cappucino, americano
     }
     
-    private func getCoffeeIngridients(drink: Drinks) -> CoffeeIngredients {
+    private func getCoffeeIngridients(drink: Drink) -> CoffeeIngredients {
         switch drink {
-        case .Americano:
+        case .americano:
             return americano
-        case .Cappucino:
+        case .cappucino:
             return cappuccino
         }
     }
@@ -87,7 +87,7 @@ class CoffeeMachine {
         return true
     }
 
-    func makeCoffee(drink: Drinks) {
+    func makeCoffee(drink: Drink) {
         if checkIngredients(coffee: getCoffeeIngridients(drink: drink)) {
             takeIngredients(coffee: getCoffeeIngridients(drink: drink))
             _status = "Your \(getCoffeeIngridients(drink: drink).name) is ready now"
