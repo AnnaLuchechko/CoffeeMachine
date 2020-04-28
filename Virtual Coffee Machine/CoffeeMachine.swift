@@ -16,63 +16,81 @@ class CoffeeMachine {
         var dripTray: Int
     }
     
-    var coffeeMachine: CoffeeIngredients = CoffeeIngredients (name: "", water: 0, coffeeBeans: 0, milk: 0, dripTray: 5)
-    var coffeeMachineTanks: CoffeeIngredients = CoffeeIngredients (name: "", water: 2000, coffeeBeans: 500, milk: 1000, dripTray: 5)
-    var americano: CoffeeIngredients = CoffeeIngredients (name: "americano", water: 500, coffeeBeans: 125, milk: 0, dripTray: 1)
-    var cappuccino: CoffeeIngredients = CoffeeIngredients (name: "cappuccino", water: 1000, coffeeBeans: 125, milk: 500, dripTray: 1)
-    var answer: String = ""
+    enum Drink {
+        case cappucino, americano
+    }
+    
+    private func getCoffeeIngridients(drink: Drink) -> CoffeeIngredients {
+        switch drink {
+        case .americano:
+            return americano
+        case .cappucino:
+            return cappuccino
+        }
+    }
+    
+    private var coffeeMachine: CoffeeIngredients = CoffeeIngredients (name: "", water: 0, coffeeBeans: 0, milk: 0, dripTray: 5)
+    private var coffeeMachineTanks: CoffeeIngredients = CoffeeIngredients (name: "", water: 2000, coffeeBeans: 500, milk: 1000, dripTray: 5)
+    private var americano: CoffeeIngredients = CoffeeIngredients (name: "americano", water: 500, coffeeBeans: 125, milk: 0, dripTray: 1)
+    private var cappuccino: CoffeeIngredients = CoffeeIngredients (name: "cappuccino", water: 1000, coffeeBeans: 125, milk: 500, dripTray: 1)
+    
+    private var _status: String = ""
+    
+    var status: String {
+        get { return _status }
+    }
     
     func addWater() {
         coffeeMachine.water = coffeeMachineTanks.water
-        answer = "Water in tank now = \(coffeeMachine.water)"
+        _status = "Water in tank now = \(coffeeMachine.water)"
     }
     
     func addCoffeeBeans() {
         coffeeMachine.coffeeBeans = coffeeMachineTanks.coffeeBeans
-        answer = "Coffee beans in tank now = \(coffeeMachine.coffeeBeans)"
+        _status = "Coffee beans in tank now = \(coffeeMachine.coffeeBeans)"
     }
 
     func addMilk() {
         coffeeMachine.milk = coffeeMachineTanks.milk
-        answer = "Milk in tank now = \(coffeeMachine.milk)"
+        _status = "Milk in tank now = \(coffeeMachine.milk)"
     }
 
     func cleanDripTray() {
         coffeeMachine.dripTray = coffeeMachineTanks.dripTray
-        answer = "Drip tray is clean now"
+        _status = "Drip tray is clean now"
     }
 
-    func takeIngredients(coffee: CoffeeIngredients) {
+    private func takeIngredients(coffee: CoffeeIngredients) {
         coffeeMachine.water -= coffee.water
         coffeeMachine.coffeeBeans -= coffee.coffeeBeans
         coffeeMachine.milk -= coffee.milk
         coffeeMachine.dripTray -= coffee.dripTray
     }
     
-    func checkIngredients(coffee: CoffeeIngredients) -> Bool {
+    private func checkIngredients(coffee: CoffeeIngredients) -> Bool {
         if coffeeMachine.water < coffee.water {
-            answer = "Please, add water"
+            _status = "Please, add water"
             return false
         }
         if coffeeMachine.coffeeBeans < coffee.coffeeBeans {
-            answer = "Please, add coffee beans"
+            _status = "Please, add coffee beans"
             return false
         }
         if coffeeMachine.milk < coffee.milk {
-            answer = "Please, add milk"
+            _status = "Please, add milk"
             return false
         }
         if coffeeMachine.dripTray < coffee.dripTray {
-            answer = "Please, clean drip tray"
+            _status = "Please, clean drip tray"
             return false
         }
         return true
     }
 
-    func makeCoffee(coffee: CoffeeIngredients) {
-        if checkIngredients(coffee: coffee) {
-            takeIngredients(coffee: coffee)
-            answer = "Your \(coffee.name) is ready now"
+    func makeCoffee(drink: Drink) {
+        if checkIngredients(coffee: getCoffeeIngridients(drink: drink)) {
+            takeIngredients(coffee: getCoffeeIngridients(drink: drink))
+            _status = "Your \(getCoffeeIngridients(drink: drink).name) is ready now"
         }
     }
 }

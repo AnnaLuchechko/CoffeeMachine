@@ -11,34 +11,36 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var coffeeCup: CoffeeMachine!
+    @IBOutlet weak var statusLabel: UILabel!
     
-    @IBOutlet weak var answer: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        coffeeCup = CoffeeMachine()
-    }
+    var coffeeMachine = CoffeeMachine()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        answer.text = coffeeCup.answer
+        statusLabel.text = coffeeMachine.status
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let settingsViewController = segue.destination as? SettingsViewController {
-            settingsViewController.coffeeCup = coffeeCup
+            settingsViewController.coffeeMachine = coffeeMachine
         }
     }
-
-    @IBAction func cappucino(_ sender: UIButton) {
-        coffeeCup.makeCoffee(coffee: coffeeCup.cappuccino)
-        answer.text = coffeeCup.answer
-    }
     
-    @IBAction func americano(_ sender: UIButton) {
-        coffeeCup.makeCoffee(coffee: coffeeCup.americano)
-        answer.text = coffeeCup.answer
+    @IBAction func makeCoffee(_ sender: UIButton) {
+        var coffee: CoffeeMachine.Drink
+        switch sender.tag {
+        case 0:
+            coffee = .cappucino
+            break
+        case 1:
+            coffee = .americano
+            break
+        default:
+            coffee = .americano
+            break
+        }
+        coffeeMachine.makeCoffee(drink: coffee)
+        statusLabel.text = coffeeMachine.status
     }
 
 }

@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gQx-kl-0ed">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,10 +28,10 @@
                                     <color key="titleShadowColor" red="0.12648394330000001" green="0.32904966600000002" blue="0.21153024940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="cappucino:" destination="BYZ-38-t0r" eventType="touchDown" id="hDm-KN-5nM"/>
+                                    <action selector="makeCoffee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dol-gI-ceo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eB-EK-Geg">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eB-EK-Geg">
                                 <rect key="frame" x="80" y="154.5" width="160" height="40.5"/>
                                 <color key="backgroundColor" red="0.51521665920000004" green="0.90809506839999998" blue="0.64819335229999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -44,7 +44,7 @@
                                     <color key="titleShadowColor" red="0.12648394330000001" green="0.32904966600000002" blue="0.21153024940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="americano:" destination="BYZ-38-t0r" eventType="touchDown" id="YKj-uc-h5w"/>
+                                    <action selector="makeCoffee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jgc-KY-laB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAKE YOUR COFFEE CHOICE:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRJ-3R-WLK">
@@ -111,7 +111,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="answer" destination="eiw-MB-YHC" id="hug-Bw-oiC"/>
+                        <outlet property="statusLabel" destination="eiw-MB-YHC" id="IgX-HU-JG8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -157,7 +157,7 @@
                                 <color key="highlightedColor" red="0.070427302789999993" green="0.32687161120000002" blue="0.86088197970000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="shadowColor" red="0.18217313844821534" green="0.25663488808042534" blue="0.3157320748730964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q37-Gy-7HM">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q37-Gy-7HM">
                                 <rect key="frame" x="45" y="196" width="230" height="33"/>
                                 <color key="backgroundColor" red="0.38039215686274508" green="0.76470588235294112" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -177,10 +177,10 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="addCoffeeBeans:" destination="vPV-rN-Tyz" eventType="touchDown" id="66r-Ak-CFg"/>
+                                    <action selector="cofeeService:" destination="vPV-rN-Tyz" eventType="touchUpInside" id="Wji-an-4xB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Diw-h9-7Kj" userLabel="ADD MILK">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Diw-h9-7Kj" userLabel="ADD MILK">
                                 <rect key="frame" x="45" y="250" width="230" height="29"/>
                                 <color key="backgroundColor" red="0.3787754445" green="0.76544362330000004" blue="0.95294360730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -200,10 +200,10 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="addMilk:" destination="vPV-rN-Tyz" eventType="touchDown" id="aPh-zQ-C7k"/>
+                                    <action selector="cofeeService:" destination="vPV-rN-Tyz" eventType="touchUpInside" id="HHk-ii-8ev"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtR-jk-zwc">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtR-jk-zwc">
                                 <rect key="frame" x="45" y="300" width="230" height="32"/>
                                 <color key="backgroundColor" red="0.3787754445" green="0.76544362330000004" blue="0.95294360730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -223,7 +223,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="cleanDripTray:" destination="vPV-rN-Tyz" eventType="touchDown" id="tfk-Sb-ZSA"/>
+                                    <action selector="cofeeService:" destination="vPV-rN-Tyz" eventType="touchUpInside" id="LhQ-IH-doF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ryp-i9-5kW">
@@ -246,7 +246,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="addWater:" destination="vPV-rN-Tyz" eventType="touchDown" id="skL-g9-kSg"/>
+                                    <action selector="cofeeService:" destination="vPV-rN-Tyz" eventType="touchUpInside" id="NeV-Ee-5HQ"/>
                                 </connections>
                             </button>
                         </subviews>
